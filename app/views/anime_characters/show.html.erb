@@ -1,0 +1,14 @@
+<h1><%= @anime_character.name %></h1>
+<ul>
+  <li>Age: <%= @anime_character.age %></li>
+  <li>Birthday: <%= @anime_character.birthday %></li>
+  <li>Gender: <%= @anime_character.gender %></li>
+  <li>Show: <%= @anime_character.show %></li>
+</ul>
+<%= link_to "Edit", edit_anime_character_path(@anime_character) %><br>
+<%= link_to "Destroy", anime_character_path(@anime_character), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %><br>
+
+<img src="<%= @anime_character.image_link %>" alt ="<%= @anime_character.name %>"><br>
+
+<%= link_to "Back", anime_characters_path %><br>
+<%= link_to "Home", root_path %>

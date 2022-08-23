@@ -1,0 +1,2 @@
+class AnimeCharactersController < ApplicationController
+end

@@ -1,0 +1,12 @@
+<h1>List of Anime Characters</h1>
+
+<ul>
+  <% @anime_characters.each do |anime_character| %>
+  <li>
+    <%= link_to anime_character.name, anime_character %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Anime Character", new_anime_character_path %><br>
+<%= link_to "Home", root_path %>

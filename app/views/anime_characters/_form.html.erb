@@ -1,0 +1,53 @@
+<%= form_with model: @anime_character do |form| %>
+<div>
+  <%= form.label :name %><br>
+  <%= form.text_area :name %>
+  <%= @anime_character.errors.full_messages_for(:name).each do |message| %>
+  <div><%= message %></div>
+  <% end %>
+</div>
+
+<div>
+  <%= form.label :age %><br>
+  <%= form.number_field :age %>
+  <%= @anime_character.errors.full_messages_for(:age).each do |message| %>
+  <div><%= message %></div>
+  <% end %>
+</div>
+
+<div>
+  <%= form.label :birthday %><br>
+  <%= form.text_field :birthday %>
+  <%= @anime_character.errors.full_messages_for(:birthday).each do |message| %>
+  <div><%= message %></div>
+  <% end %>
+</div>
+
+<div>
+  <%= form.label :gender %><br>
+  <%= form.text_field :gender %>
+  <%= @anime_character.errors.full_messages_for(:gender).each do |message| %>
+  <div><%= message %></div>
+  <% end %>
+</div>
+
+<div>
+  <%= form.label :show %><br>
+  <%= form.text_area :show %>
+  <%= @anime_character.errors.full_messages_for(:show).each do |message| %>
+  <div><%= message %></div>
+  <% end %>
+</div>
+
+<div>
+  <%= form.label :image_link %><br>
+  <%= form.text_area :image_link %>
+  <%= @anime_character.errors.full_messages_for(:image_link).each do |message| %>
+  <div><%= message %></div>
+  <% end %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+<% end %>
