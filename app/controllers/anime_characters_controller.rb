@@ -1,10 +1,22 @@
 class AnimeCharactersController < ApplicationController
   def index
     @anime_characters = AnimeCharacter.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml { render :xml => @anime_characters }
+      format.json { render :json => @anime_characters }
+    end
   end
 
   def show
     @anime_character = AnimeCharacter.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml { render :xml => @anime_character }
+      format.json { render :json => @anime_character }
+    end
   end
 
   def new
